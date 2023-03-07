@@ -8,23 +8,23 @@ export default function Staking() {
     const [stakedGhost, setStakedGhost] = useState(5);
     const [unStakedGhost, setUnStakedGhost] = useState(5);
     return (
-        <div className="flex flex-col pt-[200px] z-10 relative lg:mx-[100px] md:mx-[80px] mx-[50px] ">
+        <div className="flex flex-col pt-[200px] z-10 relative lg:mx-[100px] md:mx-[80px] mx-[50px] pointer-events-none">
             <div className="">
                 <h2 className="text-white text-[32px]"> GB Staking </h2>
             </div>
 
             <div className="flex items-end">
-                <button className={"min-w-[150px] px-[16px] py-[10px] mr-[10px] h-[50px] rounded-[8px] text-[16px]" + (selectedTab == 0 ? " bg-[#AAEFFF] text-black" : " bg-[transparent] text-white")}
+                <button className={"min-w-[150px] px-[16px] py-[10px] mr-[10px] h-[50px] rounded-[8px] text-[16px] pointer-events-auto" + (selectedTab == 0 ? " bg-[#AAEFFF] text-black" : " bg-[transparent] text-white")}
                     onClick={() => { selectTab(0)}}
                 >
                     All
                 </button>
-                <button className={"min-w-[150px] px-[16px] py-[10px] mr-[10px] h-[50px] rounded-[8px] text-[16px]" + (selectedTab == 1 ? " bg-[#AAEFFF] text-black" : " bg-[transparent text-white")}
+                <button className={"min-w-[150px] px-[16px] py-[10px] mr-[10px] h-[50px] rounded-[8px] text-[16px] pointer-events-auto" + (selectedTab == 1 ? " bg-[#AAEFFF] text-black" : " bg-[transparent text-white")}
                     onClick={() => { selectTab(1)}}
                 >
                     Staked Ghost{stakedGhost > 0 ? `(${stakedGhost})` : ``}
                 </button>
-                <button className={"min-w-[150px] px-[16px] py-[10px] mr-[10px] h-[50px] rounded-[8px] text-[16px]" + (selectedTab == 2 ? " bg-[#AAEFFF] text-black" : " bg-[transparent text-white")}
+                <button className={"min-w-[150px] px-[16px] py-[10px] mr-[10px] h-[50px] rounded-[8px] text-[16px] pointer-events-auto" + (selectedTab == 2 ? " bg-[#AAEFFF] text-black" : " bg-[transparent text-white")}
                     onClick={() => { selectTab(2)}}
                 >
                     Unstaked Ghost{unStakedGhost > 0 ? `(${unStakedGhost})` : ``}

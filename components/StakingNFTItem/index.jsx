@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function StakingNFTItem({data}) {
     return (
-        <div className="flex flex-col m-[12px] bg-[url('/images/nftback.png')] bg-cover pb-[23px]">
+        <div className="flex flex-col m-[12px] bg-[url('/images/nftBack.png')] bg-cover pb-[23px] pointer-events-auto">
             <div className="w-[203px] h-[203px] mt-[25px]">
                 <Image alt="" src={data.image} width={200} height={200}/>
             </div>
