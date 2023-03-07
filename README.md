@@ -1,0 +1,1 @@
+# GhostBuddy-Staking
